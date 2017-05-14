@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADE5B6601EC87BF100FF8398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B65F1EC87BF100FF8398 /* AppDelegate.swift */; };
+		ADE5B6621EC87BF100FF8398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B6611EC87BF100FF8398 /* ViewController.swift */; };
+		ADE5B6651EC87BF100FF8398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE5B6631EC87BF100FF8398 /* Main.storyboard */; };
+		ADE5B6681EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B6661EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld */; };
+		ADE5B66A1EC87BF100FF8398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE5B6691EC87BF100FF8398 /* Assets.xcassets */; };
+		ADE5B66D1EC87BF100FF8398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE5B66B1EC87BF100FF8398 /* LaunchScreen.storyboard */; };
+		ADE5B6781EC87BF100FF8398 /* GeoCachingClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B6771EC87BF100FF8398 /* GeoCachingClockTests.swift */; };
+		ADE5B6831EC87BF100FF8398 /* GeoCachingClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B6821EC87BF100FF8398 /* GeoCachingClockUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADE5B6741EC87BF100FF8398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADE5B6541EC87BF100FF8398 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE5B65B1EC87BF100FF8398;
+			remoteInfo = GeoCachingClock;
+		};
+		ADE5B67F1EC87BF100FF8398 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADE5B6541EC87BF100FF8398 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADE5B65B1EC87BF100FF8398;
+			remoteInfo = GeoCachingClock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADE5B65C1EC87BF100FF8398 /* GeoCachingClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoCachingClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE5B65F1EC87BF100FF8398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADE5B6611EC87BF100FF8398 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADE5B6641EC87BF100FF8398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADE5B6671EC87BF100FF8398 /* GeoCachingClock.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoCachingClock.xcdatamodel; sourceTree = "<group>"; };
+		ADE5B6691EC87BF100FF8398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADE5B66C1EC87BF100FF8398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADE5B66E1EC87BF100FF8398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE5B6731EC87BF100FF8398 /* GeoCachingClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCachingClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE5B6771EC87BF100FF8398 /* GeoCachingClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCachingClockTests.swift; sourceTree = "<group>"; };
+		ADE5B6791EC87BF100FF8398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE5B67E1EC87BF100FF8398 /* GeoCachingClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCachingClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE5B6821EC87BF100FF8398 /* GeoCachingClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCachingClockUITests.swift; sourceTree = "<group>"; };
+		ADE5B6841EC87BF100FF8398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADE5B6591EC87BF100FF8398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE5B6701EC87BF100FF8398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE5B67B1EC87BF100FF8398 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADE5B6531EC87BF100FF8398 = {
+			isa = PBXGroup;
+			children = (
+				ADE5B65E1EC87BF100FF8398 /* GeoCachingClock */,
+				ADE5B6761EC87BF100FF8398 /* GeoCachingClockTests */,
+				ADE5B6811EC87BF100FF8398 /* GeoCachingClockUITests */,
+				ADE5B65D1EC87BF100FF8398 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADE5B65D1EC87BF100FF8398 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADE5B65C1EC87BF100FF8398 /* GeoCachingClock.app */,
+				ADE5B6731EC87BF100FF8398 /* GeoCachingClockTests.xctest */,
+				ADE5B67E1EC87BF100FF8398 /* GeoCachingClockUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADE5B65E1EC87BF100FF8398 /* GeoCachingClock */ = {
+			isa = PBXGroup;
+			children = (
+				ADE5B65F1EC87BF100FF8398 /* AppDelegate.swift */,
+				ADE5B6611EC87BF100FF8398 /* ViewController.swift */,
+				ADE5B6631EC87BF100FF8398 /* Main.storyboard */,
+				ADE5B6691EC87BF100FF8398 /* Assets.xcassets */,
+				ADE5B66B1EC87BF100FF8398 /* LaunchScreen.storyboard */,
+				ADE5B66E1EC87BF100FF8398 /* Info.plist */,
+				ADE5B6661EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld */,
+			);
+			path = GeoCachingClock;
+			sourceTree = "<group>";
+		};
+		ADE5B6761EC87BF100FF8398 /* GeoCachingClockTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADE5B6771EC87BF100FF8398 /* GeoCachingClockTests.swift */,
+				ADE5B6791EC87BF100FF8398 /* Info.plist */,
+			);
+			path = GeoCachingClockTests;
+			sourceTree = "<group>";
+		};
+		ADE5B6811EC87BF100FF8398 /* GeoCachingClockUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ADE5B6821EC87BF100FF8398 /* GeoCachingClockUITests.swift */,
+				ADE5B6841EC87BF100FF8398 /* Info.plist */,
+			);
+			path = GeoCachingClockUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADE5B6871EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClock" */;
+			buildPhases = (
+				ADE5B6581EC87BF100FF8398 /* Sources */,
+				ADE5B6591EC87BF100FF8398 /* Frameworks */,
+				ADE5B65A1EC87BF100FF8398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoCachingClock;
+			productName = GeoCachingClock;
+			productReference = ADE5B65C1EC87BF100FF8398 /* GeoCachingClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADE5B6721EC87BF100FF8398 /* GeoCachingClockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADE5B68A1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockTests" */;
+			buildPhases = (
+				ADE5B66F1EC87BF100FF8398 /* Sources */,
+				ADE5B6701EC87BF100FF8398 /* Frameworks */,
+				ADE5B6711EC87BF100FF8398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADE5B6751EC87BF100FF8398 /* PBXTargetDependency */,
+			);
+			name = GeoCachingClockTests;
+			productName = GeoCachingClockTests;
+			productReference = ADE5B6731EC87BF100FF8398 /* GeoCachingClockTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ADE5B67D1EC87BF100FF8398 /* GeoCachingClockUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADE5B68D1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockUITests" */;
+			buildPhases = (
+				ADE5B67A1EC87BF100FF8398 /* Sources */,
+				ADE5B67B1EC87BF100FF8398 /* Frameworks */,
+				ADE5B67C1EC87BF100FF8398 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADE5B6801EC87BF100FF8398 /* PBXTargetDependency */,
+			);
+			name = GeoCachingClockUITests;
+			productName = GeoCachingClockUITests;
+			productReference = ADE5B67E1EC87BF100FF8398 /* GeoCachingClockUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADE5B6541EC87BF100FF8398 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Lestola Industries";
+				TargetAttributes = {
+					ADE5B65B1EC87BF100FF8398 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = RFAV5NU2JZ;
+						ProvisioningStyle = Automatic;
+					};
+					ADE5B6721EC87BF100FF8398 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = RFAV5NU2JZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ADE5B65B1EC87BF100FF8398;
+					};
+					ADE5B67D1EC87BF100FF8398 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = RFAV5NU2JZ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ADE5B65B1EC87BF100FF8398;
+					};
+				};
+			};
+			buildConfigurationList = ADE5B6571EC87BF100FF8398 /* Build configuration list for PBXProject "GeoCachingClock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADE5B6531EC87BF100FF8398;
+			productRefGroup = ADE5B65D1EC87BF100FF8398 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */,
+				ADE5B6721EC87BF100FF8398 /* GeoCachingClockTests */,
+				ADE5B67D1EC87BF100FF8398 /* GeoCachingClockUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADE5B65A1EC87BF100FF8398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE5B66D1EC87BF100FF8398 /* LaunchScreen.storyboard in Resources */,
+				ADE5B66A1EC87BF100FF8398 /* Assets.xcassets in Resources */,
+				ADE5B6651EC87BF100FF8398 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE5B6711EC87BF100FF8398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE5B67C1EC87BF100FF8398 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADE5B6581EC87BF100FF8398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE5B6681EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld in Sources */,
+				ADE5B6621EC87BF100FF8398 /* ViewController.swift in Sources */,
+				ADE5B6601EC87BF100FF8398 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE5B66F1EC87BF100FF8398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE5B6781EC87BF100FF8398 /* GeoCachingClockTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE5B67A1EC87BF100FF8398 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADE5B6831EC87BF100FF8398 /* GeoCachingClockUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADE5B6751EC87BF100FF8398 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */;
+			targetProxy = ADE5B6741EC87BF100FF8398 /* PBXContainerItemProxy */;
+		};
+		ADE5B6801EC87BF100FF8398 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */;
+			targetProxy = ADE5B67F1EC87BF100FF8398 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADE5B6631EC87BF100FF8398 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE5B6641EC87BF100FF8398 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADE5B66B1EC87BF100FF8398 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADE5B66C1EC87BF100FF8398 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADE5B6851EC87BF100FF8398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADE5B6861EC87BF100FF8398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADE5B6881EC87BF100FF8398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RFAV5NU2JZ;
+				INFOPLIST_FILE = GeoCachingClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ADE5B6891EC87BF100FF8398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RFAV5NU2JZ;
+				INFOPLIST_FILE = GeoCachingClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ADE5B68B1EC87BF100FF8398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = RFAV5NU2JZ;
+				INFOPLIST_FILE = GeoCachingClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCachingClock.app/GeoCachingClock";
+			};
+			name = Debug;
+		};
+		ADE5B68C1EC87BF100FF8398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = RFAV5NU2JZ;
+				INFOPLIST_FILE = GeoCachingClockTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCachingClock.app/GeoCachingClock";
+			};
+			name = Release;
+		};
+		ADE5B68E1EC87BF100FF8398 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = RFAV5NU2JZ;
+				INFOPLIST_FILE = GeoCachingClockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GeoCachingClock;
+			};
+			name = Debug;
+		};
+		ADE5B68F1EC87BF100FF8398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = RFAV5NU2JZ;
+				INFOPLIST_FILE = GeoCachingClockUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GeoCachingClock;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADE5B6571EC87BF100FF8398 /* Build configuration list for PBXProject "GeoCachingClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE5B6851EC87BF100FF8398 /* Debug */,
+				ADE5B6861EC87BF100FF8398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADE5B6871EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE5B6881EC87BF100FF8398 /* Debug */,
+				ADE5B6891EC87BF100FF8398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADE5B68A1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE5B68B1EC87BF100FF8398 /* Debug */,
+				ADE5B68C1EC87BF100FF8398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADE5B68D1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADE5B68E1EC87BF100FF8398 /* Debug */,
+				ADE5B68F1EC87BF100FF8398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ADE5B6661EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ADE5B6671EC87BF100FF8398 /* GeoCachingClock.xcdatamodel */,
+			);
+			currentVersion = ADE5B6671EC87BF100FF8398 /* GeoCachingClock.xcdatamodel */;
+			path = GeoCachingClock.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ADE5B6541EC87BF100FF8398 /* Project object */;
+}
