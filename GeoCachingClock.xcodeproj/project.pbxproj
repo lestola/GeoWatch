@@ -352,6 +352,9 @@
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
 							};
+							com.apple.BackgroundModes.watchos.extension = {
+								enabled = 0;
+							};
 						};
 					};
 				};

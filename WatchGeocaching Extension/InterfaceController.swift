@@ -21,6 +21,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
     var eDegreesToShowList = [180]
     var MinutesList:Array = [0]
     var DesimalsList:Array = [0]
+    var DesimalsToShowList:Array = ["000"]
     
     //valitut arvot pickereistä
     var selectedNDegrees:Int = 0
@@ -99,6 +100,18 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
             DesimalsList.append(o)
         }
         
+        for u in 1...999{
+            if u < 10 {
+                DesimalsToShowList.append("00" + String(u))
+            }
+            if u > 9 && u < 100 {
+                DesimalsToShowList.append("0" + String(u))
+            }
+            if u > 99 && u < 1000 {
+                DesimalsToShowList.append(String(u))
+            }
+        }
+        
         //pohjoisen asteet picker
         var pickerItems:[WKPickerItem] = [WKPickerItem]()
         
@@ -135,7 +148,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         
         //desiaali pickerit
         var pickerItems4:[WKPickerItem] = [WKPickerItem]()
-        for d in DesimalsList{
+        for d in DesimalsToShowList{
             let item = WKPickerItem()
             item.title = String(d)
             pickerItems4.append(item)
@@ -144,10 +157,7 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         eDesimalPicker.setItems(pickerItems4)
         nDesimalPicker.setItems(pickerItems4)
         
-        //säädetään pickereiden alotusarvot tallennettuihin
-        //if let unit = defaults?.integer(forKey: "nDegreeKey") {
-        //    nDegreePicker.setSelectedItemIndex(unit)
-        //}
+        //valitaan pickereiden aloitusarvot keskeltä
         nDegreePicker.setSelectedItemIndex(90)
         eDegreePicker.setSelectedItemIndex(180)
         
