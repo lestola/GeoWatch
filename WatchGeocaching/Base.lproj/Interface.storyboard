@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,44 +14,51 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchGeocaching" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Put Latitude(N):" id="QJA-P3-KEV"/>
+                        <label alignment="left" text="Set Latitude:" id="QJA-P3-KEV"/>
                         <group width="1" height="25" alignment="left" id="rFn-uQ-wZo">
                             <items>
-                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="qDp-bo-uOd">
+                                <picker width="0.29999999999999999" height="1" alignment="left" focusStyle="stack" id="qDp-bo-uOd">
                                     <connections>
                                         <action selector="nDegreeChangedAction:" destination="AgC-eL-Hgc" id="E3w-We-LTS"/>
                                     </connections>
                                 </picker>
                                 <label width="0.040000000000000001" alignment="left" text="°" id="tWM-8f-YqE"/>
-                                <picker width="0.25" height="1" alignment="left" focusStyle="stack" id="xrN-l7-hkk">
+                                <picker width="0.27000000000000002" height="1" alignment="left" focusStyle="stack" id="xrN-l7-hkk">
+                                    <variation key="device=watch38mm" widthAdjustment="1"/>
                                     <connections>
                                         <action selector="nMinutesChangedAction:" destination="AgC-eL-Hgc" id="f69-qC-nPb"/>
                                     </connections>
                                 </picker>
                                 <label width="0.029999999999999999" alignment="left" text="." id="zYI-qp-cHm"/>
-                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="8Yh-Lv-TQt">
+                                <picker width="0.35999999999999999" height="1" alignment="left" focusStyle="stack" id="8Yh-Lv-TQt">
                                     <connections>
                                         <action selector="nDesimalsChangedAction:" destination="AgC-eL-Hgc" id="3V1-ww-75R"/>
                                     </connections>
                                 </picker>
                             </items>
                         </group>
-                        <label alignment="left" text="And Longitude(E):" id="qoc-AJ-EZB"/>
+                        <label alignment="left" text="And Longitude:" id="qoc-AJ-EZB"/>
                         <group width="1" height="25" alignment="left" id="mUh-HO-Cmx">
                             <items>
-                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="7Ne-UK-YZ1">
+                                <picker width="0.29999999999999999" height="1" alignment="left" focusStyle="stack" id="7Ne-UK-YZ1">
+                                    <variation key="device=watch38mm" widthAdjustment="4"/>
                                     <connections>
                                         <action selector="eDegreesChangedAction:" destination="AgC-eL-Hgc" id="gic-iZ-6lq"/>
                                     </connections>
                                 </picker>
-                                <label width="0.040000000000000001" alignment="left" text="°" id="B03-Sx-Bln"/>
-                                <picker width="0.25" height="1" alignment="left" focusStyle="stack" id="yAw-rg-hSH">
+                                <label width="0.040000000000000001" alignment="left" text="°" id="B03-Sx-Bln">
+                                    <variation key="device=watch38mm" widthAdjustment="-2"/>
+                                </label>
+                                <picker width="0.27000000000000002" height="1" alignment="left" focusStyle="stack" id="yAw-rg-hSH">
+                                    <variation key="device=watch38mm" widthAdjustment="1"/>
                                     <connections>
                                         <action selector="eMinutesChangedAction:" destination="AgC-eL-Hgc" id="nYp-9a-Uim"/>
                                     </connections>
                                 </picker>
-                                <label width="0.029999999999999999" alignment="left" text="." id="ThD-CL-wvB"/>
-                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="l5N-IB-6yx">
+                                <label width="0.029999999999999999" alignment="left" text="." id="ThD-CL-wvB">
+                                    <variation key="device=watch38mm" widthAdjustment="-2"/>
+                                </label>
+                                <picker width="0.35999999999999999" height="1" alignment="left" focusStyle="stack" id="l5N-IB-6yx">
                                     <connections>
                                         <action selector="eDesimalsChangedAction:" destination="AgC-eL-Hgc" id="SiZ-u1-0xn"/>
                                     </connections>
@@ -86,8 +93,22 @@
                         <label alignment="left" text="Meters to Cache:" id="LRC-Hd-Ghq"/>
                         <label alignment="left" text="10 Meters" id="QUf-zn-W9C"/>
                         <separator alignment="left" id="u1W-Ha-0mi"/>
-                        <map height="100" alignment="left" id="w21-Ol-Lo3"/>
+                        <map height="100" alignment="left" enabled="NO" id="w21-Ol-Lo3"/>
                     </items>
+                    <menu key="menu" id="xTt-kZ-TcT">
+                        <items>
+                            <menuItem title="Metric" icon="accept" id="Oa8-ul-2RC">
+                                <connections>
+                                    <action selector="metricForceButtonAction" destination="TYA-dt-lZH" id="bRL-vD-Y3p"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Imperial" icon="accept" id="5To-6o-vXK">
+                                <connections>
+                                    <action selector="imperialForceButtonAction" destination="TYA-dt-lZH" id="vkI-pv-dc5"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="distanceToTargetLabel" destination="QUf-zn-W9C" id="0ad-p9-nwQ"/>
                         <outlet property="mapOutlet" destination="w21-Ol-Lo3" id="P47-Ek-sB1"/>

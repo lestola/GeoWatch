@@ -18,7 +18,10 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
     var mapZoomLatitude = Double()
     var mapZoomLongitude = Double()
     //kartan suhteellinen zoomLevel (mahollisesti yritetään saada riittävästi kuvaa näkymään että nuppineulan pää mahtuu kuvaan)
-    let zoomLevel:Double = 3.2
+    let zoomLevel:Double = 3.0
+    //tämä muuttuja kertoo käytetäänkö metri vai maili järjestelmää
+    var metric = true
+    
     
     let locationManager = CLLocationManager()
     
@@ -54,17 +57,33 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
-            //lasketaan etäisyys measure funktiolla
-            print("Olet tässä:", location.coordinate)
-            print("Target coords:", targetCoordinates)
-            let distance = Int(measure(lat1: location.coordinate.latitude, lon1: location.coordinate.longitude, lat2: targetCoordinates.latitude, lon2: targetCoordinates.longitude))
-            if distance > 1000{
+            if metric {
+                //lasketaan etäisyys measure funktiolla
+                print("Olet tässä:", location.coordinate)
+                print("Target coords:", targetCoordinates)
+                let distance = Int(measure(lat1: location.coordinate.latitude, lon1: location.coordinate.longitude, lat2: targetCoordinates.latitude, lon2: targetCoordinates.longitude))
+                if distance > 1000{
                 //Muutetaan metrit kilometreiksi yhdellä desimaalilla
-                distanceToTargetLabel.setText(String(Double(Int(distance / 100))/10) + "km")
+                    distanceToTargetLabel.setText(String(Double(Int(distance / 100))/10) + "km")
+                }
+                else{
+                    distanceToTargetLabel.setText(String(distance) + "m")
+                }
             }
-            else{
-                distanceToTargetLabel.setText(String(distance) + "m")
+            else if !metric{
+                print("Olet tässä:", location.coordinate)
+                print("Target coords:", targetCoordinates)
+                var distance = measure(lat1: location.coordinate.latitude, lon1: location.coordinate.longitude, lat2: targetCoordinates.latitude, lon2: targetCoordinates.longitude)
+                distance *= 3.2808399
+                if distance < 5280.0{
+                    distanceToTargetLabel.setText(String(Int(distance)) + " feet")
+                }
+                else{
+                    distanceToTargetLabel.setText(String(Double(Int(distance / 528)/10)) + "mi")
+                }
             }
+            
+            
             //lasketaan latitude zoomin etäisyys
             if location.coordinate.latitude > targetCoordinates.latitude{
                 mapZoomLatitude = abs(location.coordinate.latitude - targetCoordinates.latitude)
@@ -124,5 +143,11 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
         let d = R * c
         let tulos = d * 1000
     return tulos; // tulos metreinä
+    }
+    @IBAction func metricForceButtonAction() {
+        metric = true
+    }
+    @IBAction func imperialForceButtonAction() {
+        metric = false
     }
 }
