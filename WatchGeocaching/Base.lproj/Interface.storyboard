@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchGeocaching" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Put Latitude(N):" id="QJA-P3-KEV"/>
+                        <group width="1" height="25" alignment="left" id="rFn-uQ-wZo">
+                            <items>
+                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="qDp-bo-uOd">
+                                    <connections>
+                                        <action selector="nDegreeChangedAction:" destination="AgC-eL-Hgc" id="E3w-We-LTS"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.040000000000000001" alignment="left" text="°" id="tWM-8f-YqE"/>
+                                <picker width="0.25" height="1" alignment="left" focusStyle="stack" id="xrN-l7-hkk">
+                                    <connections>
+                                        <action selector="nMinutesChangedAction:" destination="AgC-eL-Hgc" id="f69-qC-nPb"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.029999999999999999" alignment="left" text="." id="zYI-qp-cHm"/>
+                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="8Yh-Lv-TQt">
+                                    <connections>
+                                        <action selector="nDesimalsChangedAction:" destination="AgC-eL-Hgc" id="3V1-ww-75R"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <label alignment="left" text="And Longitude(E):" id="qoc-AJ-EZB"/>
+                        <group width="1" height="25" alignment="left" id="mUh-HO-Cmx">
+                            <items>
+                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="7Ne-UK-YZ1">
+                                    <connections>
+                                        <action selector="eDegreesChangedAction:" destination="AgC-eL-Hgc" id="gic-iZ-6lq"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.040000000000000001" alignment="left" text="°" id="B03-Sx-Bln"/>
+                                <picker width="0.25" height="1" alignment="left" focusStyle="stack" id="yAw-rg-hSH">
+                                    <connections>
+                                        <action selector="eMinutesChangedAction:" destination="AgC-eL-Hgc" id="nYp-9a-Uim"/>
+                                    </connections>
+                                </picker>
+                                <label width="0.029999999999999999" alignment="left" text="." id="ThD-CL-wvB"/>
+                                <picker width="0.34000000000000002" height="1" alignment="left" focusStyle="stack" id="l5N-IB-6yx">
+                                    <connections>
+                                        <action selector="eDesimalsChangedAction:" destination="AgC-eL-Hgc" id="SiZ-u1-0xn"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Set GeoCache" id="pIa-cm-Osc">
+                            <connections>
+                                <action selector="setButtonAction" destination="AgC-eL-Hgc" id="MhO-aN-tHw"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="eDegreePicker" destination="7Ne-UK-YZ1" id="im2-l3-Qdv"/>
+                        <outlet property="eDesimalPicker" destination="l5N-IB-6yx" id="2XT-hE-zVK"/>
+                        <outlet property="eMinutePicker" destination="yAw-rg-hSH" id="0lq-g2-wjq"/>
+                        <outlet property="latitudeLabel" destination="QJA-P3-KEV" id="9EF-dZ-tnb"/>
+                        <outlet property="longitudeLabel" destination="qoc-AJ-EZB" id="0cd-HJ-xpL"/>
+                        <outlet property="nDegreePicker" destination="qDp-bo-uOd" id="zGn-GO-Txn"/>
+                        <outlet property="nDesimalPicker" destination="8Yh-Lv-TQt" id="HUi-Op-rR5"/>
+                        <outlet property="nMinutePicker" destination="xrN-l7-hkk" id="J2m-Jm-QGr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="63" y="-111"/>
+        </scene>
+        <!--FinderScreen-->
+        <scene sceneID="xUS-sD-hEi">
+            <objects>
+                <controller identifier="FinderScreen" id="TYA-dt-lZH" customClass="FinderScreen" customModule="WatchGeocaching_Extension">
+                    <items>
+                        <label alignment="left" text="Meters to Cache:" id="LRC-Hd-Ghq"/>
+                        <label alignment="left" text="10 Meters" id="QUf-zn-W9C"/>
+                        <separator alignment="left" id="u1W-Ha-0mi"/>
+                        <map height="100" alignment="left" id="w21-Ol-Lo3"/>
+                    </items>
+                    <connections>
+                        <outlet property="distanceToTargetLabel" destination="QUf-zn-W9C" id="0ad-p9-nwQ"/>
+                        <outlet property="mapOutlet" destination="w21-Ol-Lo3" id="P47-Ek-sB1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="429" y="-96"/>
+        </scene>
+    </scenes>
+</document>
