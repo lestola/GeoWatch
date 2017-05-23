@@ -18,7 +18,7 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
     var mapZoomLatitude = Double()
     var mapZoomLongitude = Double()
     //kartan suhteellinen zoomLevel (mahollisesti yritetään saada riittävästi kuvaa näkymään että nuppineulan pää mahtuu kuvaan)
-    let zoomLevel:Double = 3.5
+    let zoomLevel:Double = 3.2
     
     let locationManager = CLLocationManager()
     
@@ -40,6 +40,9 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        //poistetaan nuppineulat jos niitä on jäänyt viimekerroilta
+        mapOutlet.removeAllAnnotations()
         
         if CLLocationManager.locationServicesEnabled(){
             locationManager.delegate = self
@@ -64,11 +67,11 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
             }
             //lasketaan latitude zoomin etäisyys
             if location.coordinate.latitude > targetCoordinates.latitude{
-                mapZoomLatitude = location.coordinate.latitude - targetCoordinates.latitude
+                mapZoomLatitude = abs(location.coordinate.latitude - targetCoordinates.latitude)
             }
             
             else if location.coordinate.latitude < targetCoordinates.latitude{
-                mapZoomLatitude = targetCoordinates.latitude - location.coordinate.latitude
+                mapZoomLatitude = abs(targetCoordinates.latitude - location.coordinate.latitude)
             }
             else{
               mapZoomLatitude = 1
@@ -76,27 +79,33 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
             
             //lasketaan longitude zoomin etäisyys
             if location.coordinate.longitude > targetCoordinates.longitude{
-                mapZoomLongitude = location.coordinate.longitude - targetCoordinates.longitude
+                mapZoomLongitude = abs(location.coordinate.longitude - targetCoordinates.longitude)
             }
             
             else if location.coordinate.longitude < targetCoordinates.longitude{
-                mapZoomLongitude = targetCoordinates.longitude - location.coordinate.longitude
+                mapZoomLongitude = abs(targetCoordinates.longitude - location.coordinate.longitude)
             }
             else{
                 mapZoomLongitude = 1
             }
             
+            
+            //kerrotaan vielä constantilla jolla voidaan vähän hioa etäisyyksiä
             mapZoomLatitude *= zoomLevel
             mapZoomLongitude *= zoomLevel
 
             //Zoomataan kartta sijaintiin jossa ollaan!
             mapOutlet.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(mapZoomLatitude), longitudeDelta: CLLocationDegrees(mapZoomLongitude))))
             
+            //poistetaan vanhat pinnit
+            mapOutlet.removeAllAnnotations()
+            
             //lisätään pinni siihen missä kätkö sijaitsee
             mapOutlet.addAnnotation(targetCoordinates, with: WKInterfaceMapPinColor.purple)
             
             //lisätään tähtäin siihen missä käyttäjä on
-            //mapOutlet.addAnnotation(location.coordinate, with: #imageLiteral(resourceName: "crosshair"), centerOffset: CGPoint(x: 0, y: 0))
+            mapOutlet.addAnnotation(location.coordinate, with: #imageLiteral(resourceName: "crosshair"), centerOffset: CGPoint(x: 0, y: 0))
+ 
         }
     }
     

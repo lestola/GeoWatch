@@ -81,7 +81,7 @@
         <!--FinderScreen-->
         <scene sceneID="xUS-sD-hEi">
             <objects>
-                <controller identifier="FinderScreen" id="TYA-dt-lZH" customClass="FinderScreen" customModule="WatchGeocaching_Extension">
+                <controller identifier="FinderScreen" backgroundImage="crosshair" id="TYA-dt-lZH" customClass="FinderScreen" customModule="WatchGeocaching_Extension">
                     <items>
                         <label alignment="left" text="Meters to Cache:" id="LRC-Hd-Ghq"/>
                         <label alignment="left" text="10 Meters" id="QUf-zn-W9C"/>
