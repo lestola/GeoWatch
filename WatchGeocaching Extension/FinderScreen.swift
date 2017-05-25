@@ -171,7 +171,7 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
         if zoomVarmistus < 1{
             zoomLevel = 1.1
         }
-        else if zoomVarmistus > 0 && zoomVarmistus < 10{
+        else if zoomVarmistus > 1 && zoomVarmistus < 5{
             zoomLevel = zoomVarmistus
         }
         else if zoomVarmistus > 5{
