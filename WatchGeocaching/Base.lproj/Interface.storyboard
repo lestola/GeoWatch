@@ -90,7 +90,10 @@
             <objects>
                 <controller identifier="FinderScreen" backgroundImage="crosshair" id="TYA-dt-lZH" customClass="FinderScreen" customModule="WatchGeocaching_Extension">
                     <items>
-                        <label alignment="left" text="Distance:" id="LRC-Hd-Ghq"/>
+                        <label alignment="left" id="LRC-Hd-Ghq">
+                            <variation key="device=watch38mm" text="Distance:"/>
+                            <variation key="device=watch42mm" text="Distance to cache:"/>
+                        </label>
                         <label alignment="left" text="-Distance-" id="QUf-zn-W9C"/>
                         <separator alignment="left" id="u1W-Ha-0mi"/>
                         <map height="100" alignment="left" enabled="NO" id="w21-Ol-Lo3"/>
