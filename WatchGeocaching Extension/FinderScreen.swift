@@ -15,12 +15,14 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
     var targetN:Int = 0
     var targetE:Int = 0
     var targetCoordinates = CLLocationCoordinate2D()
+    var mapCenterCoordinates = CLLocationCoordinate2D()
     var mapZoomLatitude = Double()
     var mapZoomLongitude = Double()
     //kartan suhteellinen zoomLevel (mahollisesti yritetään saada riittävästi kuvaa näkymään että nuppineulan pää mahtuu kuvaan)
-    var zoomLevel:Double = 3.0
+    var zoomLevel:Double = 1.5
     //tämä muuttuja kertoo käytetäänkö metri vai maili järjestelmää
     var metric = true
+    var tooLongDistance = false
     
     
     let locationManager = CLLocationManager()
@@ -59,6 +61,7 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
+            //------------ Pituus mitat ruudun yläälaitaan ---------------
             if metric {
                 //lasketaan etäisyys measure funktiolla
                 print("Olet tässä:", location.coordinate)
@@ -86,38 +89,41 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
                 }
             }
             
-            
-            //lasketaan latitude zoomin etäisyys
+            //---------------- Kartta zoomaus ----------------
+            //latitude keskipiste kartalla
             if location.coordinate.latitude > targetCoordinates.latitude{
-                mapZoomLatitude = abs(location.coordinate.latitude - targetCoordinates.latitude)
+                mapCenterCoordinates.latitude = location.coordinate.latitude - (abs(location.coordinate.latitude - targetCoordinates.latitude)/2)
             }
-            
-            else if location.coordinate.latitude < targetCoordinates.latitude{
-                mapZoomLatitude = abs(targetCoordinates.latitude - location.coordinate.latitude)
+            if targetCoordinates.latitude > location.coordinate.latitude{
+                mapCenterCoordinates.latitude = targetCoordinates.latitude - (abs(location.coordinate.latitude - targetCoordinates.latitude)/2)
             }
-            else{
-              mapZoomLatitude = 1
-            }
-            
-            //lasketaan longitude zoomin etäisyys
+            //longitude keskipiste kartalla
             if location.coordinate.longitude > targetCoordinates.longitude{
-                mapZoomLongitude = abs(location.coordinate.longitude - targetCoordinates.longitude)
+                mapCenterCoordinates.longitude = location.coordinate.longitude - (abs(location.coordinate.longitude - targetCoordinates.longitude)/2)
+            }
+            if targetCoordinates.longitude > location.coordinate.longitude{
+                mapCenterCoordinates.longitude = targetCoordinates.longitude - (abs(location.coordinate.longitude - targetCoordinates.longitude)/2)
             }
             
-            else if location.coordinate.longitude < targetCoordinates.longitude{
-                mapZoomLongitude = abs(targetCoordinates.longitude - location.coordinate.longitude)
+            //zoom level
+            if ((abs(location.coordinate.latitude - targetCoordinates.latitude) * zoomLevel) < 100) && ((abs(location.coordinate.longitude - targetCoordinates.longitude) * zoomLevel) < 100){
+                tooLongDistance = false
+                mapZoomLatitude = abs(location.coordinate.latitude - targetCoordinates.latitude) * zoomLevel
+                mapZoomLongitude = abs(location.coordinate.longitude - targetCoordinates.longitude) * zoomLevel
             }
             else{
-                mapZoomLongitude = 1
+                tooLongDistance = true
             }
             
+            //-------------- kartan alustus ja piirto--------------
+            if tooLongDistance {
+                    print("too Long Distance")
+                    mapOutlet.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(1), longitudeDelta: CLLocationDegrees(1))))
+            }
             
-            //kerrotaan vielä constantilla jolla voidaan vähän hioa etäisyyksiä
-            mapZoomLatitude *= zoomLevel
-            mapZoomLongitude *= zoomLevel
-
+            else {
             //Zoomataan kartta sijaintiin jossa ollaan!
-            mapOutlet.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(mapZoomLatitude), longitudeDelta: CLLocationDegrees(mapZoomLongitude))))
+            mapOutlet.setRegion(MKCoordinateRegion(center: mapCenterCoordinates, span: MKCoordinateSpan(latitudeDelta: CLLocationDegrees(mapZoomLatitude), longitudeDelta: CLLocationDegrees(mapZoomLongitude))))
             
             //poistetaan vanhat pinnit
             mapOutlet.removeAllAnnotations()
@@ -127,7 +133,7 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
             
             //lisätään tähtäin siihen missä käyttäjä on
             mapOutlet.addAnnotation(location.coordinate, with: #imageLiteral(resourceName: "crosshair"), centerOffset: CGPoint(x: 0, y: 0))
- 
+            }
         }
     }
     
@@ -147,28 +153,32 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
         let tulos = d * 1000
     return tulos; // tulos metreinä
     }
+    
     @IBAction func metricForceButtonAction() {
+        //force nappulalla metrijärjestelmä käyttöön
         metric = true
     }
+    
     @IBAction func imperialForceButtonAction() {
+        //force nappulalla imperial järjestelmä käyttöön
         metric = false
     }
     
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?,
                         rotationalDelta: Double){
-        print(rotationalDelta)
+        //muutetaan zoomleveliä kartalla
         let zoomVarmistus:Double = zoomLevel + rotationalDelta
-        if zoomVarmistus < 0{
-            zoomLevel = 0.0025
+        if zoomVarmistus < 1{
+            zoomLevel = 1.1
         }
         else if zoomVarmistus > 0 && zoomVarmistus < 10{
             zoomLevel = zoomVarmistus
         }
-        else if zoomVarmistus > 10{
-            zoomLevel = 10.0
+        else if zoomVarmistus > 5{
+            zoomLevel = 4.9
         }
         else{
-            zoomLevel = 3.0
+            zoomLevel = 1.5
         }
         print("zoomLevel:", zoomLevel)
     }
