@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 import CoreLocation
 
-class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
+class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDelegate {
     
     var targetN:Int = 0
     var targetE:Int = 0
@@ -18,7 +18,7 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
     var mapZoomLatitude = Double()
     var mapZoomLongitude = Double()
     //kartan suhteellinen zoomLevel (mahollisesti yritetään saada riittävästi kuvaa näkymään että nuppineulan pää mahtuu kuvaan)
-    let zoomLevel:Double = 3.0
+    var zoomLevel:Double = 3.0
     //tämä muuttuja kertoo käytetäänkö metri vai maili järjestelmää
     var metric = true
     
@@ -35,7 +35,9 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
         locationManager.requestAlwaysAuthorization()
         //ladataan contextista coordinaatit coordinaatti arrayhin
         targetCoordinates = context as! CLLocationCoordinate2D
-        //tehdään karttatemppuja
+        //herätetään kruunukytkin käyttöön
+        crownSequencer.focus()
+        crownSequencer.delegate = self
         
         
     }
@@ -71,15 +73,16 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
                 }
             }
             else if !metric{
+                //lasketaan etäisyydet jos imperialit käytössä
                 print("Olet tässä:", location.coordinate)
                 print("Target coords:", targetCoordinates)
-                var distance = measure(lat1: location.coordinate.latitude, lon1: location.coordinate.longitude, lat2: targetCoordinates.latitude, lon2: targetCoordinates.longitude)
+                var distance:Double = measure(lat1: location.coordinate.latitude, lon1: location.coordinate.longitude, lat2: targetCoordinates.latitude, lon2: targetCoordinates.longitude)
                 distance *= 3.2808399
                 if distance < 5280.0{
                     distanceToTargetLabel.setText(String(Int(distance)) + " feet")
                 }
                 else{
-                    distanceToTargetLabel.setText(String(Double(Int(distance / 528)/10)) + "mi")
+                    distanceToTargetLabel.setText(String(Double(Int(distance / 528))/10) + "mi")
                 }
             }
             
@@ -149,5 +152,24 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate {
     }
     @IBAction func imperialForceButtonAction() {
         metric = false
+    }
+    
+    func crownDidRotate(_ crownSequencer: WKCrownSequencer?,
+                        rotationalDelta: Double){
+        print(rotationalDelta)
+        let zoomVarmistus:Double = zoomLevel + rotationalDelta
+        if zoomVarmistus < 0{
+            zoomLevel = 0.0025
+        }
+        else if zoomVarmistus > 0 && zoomVarmistus < 10{
+            zoomLevel = zoomVarmistus
+        }
+        else if zoomVarmistus > 10{
+            zoomLevel = 10.0
+        }
+        else{
+            zoomLevel = 3.0
+        }
+        print("zoomLevel:", zoomLevel)
     }
 }

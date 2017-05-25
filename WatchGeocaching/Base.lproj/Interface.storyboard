@@ -65,7 +65,7 @@
                                 </picker>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Set GeoCache" id="pIa-cm-Osc">
+                        <button width="1" alignment="left" title="Set" id="pIa-cm-Osc">
                             <connections>
                                 <action selector="setButtonAction" destination="AgC-eL-Hgc" id="MhO-aN-tHw"/>
                             </connections>
@@ -90,8 +90,8 @@
             <objects>
                 <controller identifier="FinderScreen" backgroundImage="crosshair" id="TYA-dt-lZH" customClass="FinderScreen" customModule="WatchGeocaching_Extension">
                     <items>
-                        <label alignment="left" text="Meters to Cache:" id="LRC-Hd-Ghq"/>
-                        <label alignment="left" text="10 Meters" id="QUf-zn-W9C"/>
+                        <label alignment="left" text="Distance:" id="LRC-Hd-Ghq"/>
+                        <label alignment="left" text="-Distance-" id="QUf-zn-W9C"/>
                         <separator alignment="left" id="u1W-Ha-0mi"/>
                         <map height="100" alignment="left" enabled="NO" id="w21-Ol-Lo3"/>
                     </items>
@@ -115,7 +115,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="429" y="-96"/>
+            <point key="canvasLocation" x="303" y="-110"/>
         </scene>
     </scenes>
 </document>
