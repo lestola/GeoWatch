@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AD612D281ECC567B009DC57A /* FinderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD612D271ECC567B009DC57A /* FinderScreen.swift */; };
+		ADA008701ED80606004A261D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA0086F1ED80606004A261D /* PageViewController.swift */; };
 		ADE5B6601EC87BF100FF8398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B65F1EC87BF100FF8398 /* AppDelegate.swift */; };
 		ADE5B6621EC87BF100FF8398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE5B6611EC87BF100FF8398 /* ViewController.swift */; };
 		ADE5B6651EC87BF100FF8398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE5B6631EC87BF100FF8398 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 /* Begin PBXFileReference section */
 		AD300B0A1ECF1DF3007A7ED6 /* WatchGeocaching Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchGeocaching Extension.entitlements"; sourceTree = "<group>"; };
 		AD612D271ECC567B009DC57A /* FinderScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderScreen.swift; sourceTree = "<group>"; };
+		ADA0086F1ED80606004A261D /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		ADE5B65C1EC87BF100FF8398 /* GeoCachingClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoCachingClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE5B65F1EC87BF100FF8398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE5B6611EC87BF100FF8398 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				ADE5B66B1EC87BF100FF8398 /* LaunchScreen.storyboard */,
 				ADE5B66E1EC87BF100FF8398 /* Info.plist */,
 				ADE5B6661EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld */,
+				ADA0086F1ED80606004A261D /* PageViewController.swift */,
 			);
 			path = GeoCachingClock;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				ADE5B6681EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld in Sources */,
 				ADE5B6621EC87BF100FF8398 /* ViewController.swift in Sources */,
 				ADE5B6601EC87BF100FF8398 /* AppDelegate.swift in Sources */,
+				ADA008701ED80606004A261D /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
