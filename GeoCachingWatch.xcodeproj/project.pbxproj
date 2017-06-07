@@ -86,7 +86,7 @@
 		AD300B0A1ECF1DF3007A7ED6 /* WatchGeocaching Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchGeocaching Extension.entitlements"; sourceTree = "<group>"; };
 		AD612D271ECC567B009DC57A /* FinderScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinderScreen.swift; sourceTree = "<group>"; };
 		ADA0086F1ED80606004A261D /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		ADE5B65C1EC87BF100FF8398 /* GeoCachingClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoCachingClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE5B65C1EC87BF100FF8398 /* GeoCachingWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoCachingWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE5B65F1EC87BF100FF8398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE5B6611EC87BF100FF8398 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADE5B6641EC87BF100FF8398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 		ADE5B6691EC87BF100FF8398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADE5B66C1EC87BF100FF8398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADE5B66E1EC87BF100FF8398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADE5B6731EC87BF100FF8398 /* GeoCachingClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCachingClockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE5B6731EC87BF100FF8398 /* GeoCachingWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCachingWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE5B6771EC87BF100FF8398 /* GeoCachingClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCachingClockTests.swift; sourceTree = "<group>"; };
 		ADE5B6791EC87BF100FF8398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADE5B67E1EC87BF100FF8398 /* GeoCachingClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCachingClockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE5B67E1EC87BF100FF8398 /* GeoCachingWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoCachingWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE5B6821EC87BF100FF8398 /* GeoCachingClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCachingClockUITests.swift; sourceTree = "<group>"; };
 		ADE5B6841EC87BF100FF8398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE5B6921EC87C1600FF8398 /* WatchGeocaching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchGeocaching.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,9 +146,9 @@
 		ADE5B6531EC87BF100FF8398 = {
 			isa = PBXGroup;
 			children = (
-				ADE5B65E1EC87BF100FF8398 /* GeoCachingClock */,
-				ADE5B6761EC87BF100FF8398 /* GeoCachingClockTests */,
-				ADE5B6811EC87BF100FF8398 /* GeoCachingClockUITests */,
+				ADE5B65E1EC87BF100FF8398 /* GeoCachingWatch */,
+				ADE5B6761EC87BF100FF8398 /* GeoCachingWatchTests */,
+				ADE5B6811EC87BF100FF8398 /* GeoCachingWatchUITests */,
 				ADE5B6931EC87C1600FF8398 /* WatchGeocaching */,
 				ADE5B6A21EC87C1700FF8398 /* WatchGeocaching Extension */,
 				ADE5B65D1EC87BF100FF8398 /* Products */,
@@ -158,16 +158,16 @@
 		ADE5B65D1EC87BF100FF8398 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADE5B65C1EC87BF100FF8398 /* GeoCachingClock.app */,
-				ADE5B6731EC87BF100FF8398 /* GeoCachingClockTests.xctest */,
-				ADE5B67E1EC87BF100FF8398 /* GeoCachingClockUITests.xctest */,
+				ADE5B65C1EC87BF100FF8398 /* GeoCachingWatch.app */,
+				ADE5B6731EC87BF100FF8398 /* GeoCachingWatchTests.xctest */,
+				ADE5B67E1EC87BF100FF8398 /* GeoCachingWatchUITests.xctest */,
 				ADE5B6921EC87C1600FF8398 /* WatchGeocaching.app */,
 				ADE5B69E1EC87C1700FF8398 /* WatchGeocaching Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADE5B65E1EC87BF100FF8398 /* GeoCachingClock */ = {
+		ADE5B65E1EC87BF100FF8398 /* GeoCachingWatch */ = {
 			isa = PBXGroup;
 			children = (
 				ADE5B65F1EC87BF100FF8398 /* AppDelegate.swift */,
@@ -179,25 +179,25 @@
 				ADE5B6661EC87BF100FF8398 /* GeoCachingClock.xcdatamodeld */,
 				ADA0086F1ED80606004A261D /* PageViewController.swift */,
 			);
-			path = GeoCachingClock;
+			path = GeoCachingWatch;
 			sourceTree = "<group>";
 		};
-		ADE5B6761EC87BF100FF8398 /* GeoCachingClockTests */ = {
+		ADE5B6761EC87BF100FF8398 /* GeoCachingWatchTests */ = {
 			isa = PBXGroup;
 			children = (
 				ADE5B6771EC87BF100FF8398 /* GeoCachingClockTests.swift */,
 				ADE5B6791EC87BF100FF8398 /* Info.plist */,
 			);
-			path = GeoCachingClockTests;
+			path = GeoCachingWatchTests;
 			sourceTree = "<group>";
 		};
-		ADE5B6811EC87BF100FF8398 /* GeoCachingClockUITests */ = {
+		ADE5B6811EC87BF100FF8398 /* GeoCachingWatchUITests */ = {
 			isa = PBXGroup;
 			children = (
 				ADE5B6821EC87BF100FF8398 /* GeoCachingClockUITests.swift */,
 				ADE5B6841EC87BF100FF8398 /* Info.plist */,
 			);
-			path = GeoCachingClockUITests;
+			path = GeoCachingWatchUITests;
 			sourceTree = "<group>";
 		};
 		ADE5B6931EC87C1600FF8398 /* WatchGeocaching */ = {
@@ -226,9 +226,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */ = {
+		ADE5B65B1EC87BF100FF8398 /* GeoCachingWatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADE5B6871EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClock" */;
+			buildConfigurationList = ADE5B6871EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingWatch" */;
 			buildPhases = (
 				ADE5B6581EC87BF100FF8398 /* Sources */,
 				ADE5B6591EC87BF100FF8398 /* Frameworks */,
@@ -240,14 +240,14 @@
 			dependencies = (
 				ADE5B6AB1EC87C1700FF8398 /* PBXTargetDependency */,
 			);
-			name = GeoCachingClock;
+			name = GeoCachingWatch;
 			productName = GeoCachingClock;
-			productReference = ADE5B65C1EC87BF100FF8398 /* GeoCachingClock.app */;
+			productReference = ADE5B65C1EC87BF100FF8398 /* GeoCachingWatch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ADE5B6721EC87BF100FF8398 /* GeoCachingClockTests */ = {
+		ADE5B6721EC87BF100FF8398 /* GeoCachingWatchTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADE5B68A1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockTests" */;
+			buildConfigurationList = ADE5B68A1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingWatchTests" */;
 			buildPhases = (
 				ADE5B66F1EC87BF100FF8398 /* Sources */,
 				ADE5B6701EC87BF100FF8398 /* Frameworks */,
@@ -258,14 +258,14 @@
 			dependencies = (
 				ADE5B6751EC87BF100FF8398 /* PBXTargetDependency */,
 			);
-			name = GeoCachingClockTests;
+			name = GeoCachingWatchTests;
 			productName = GeoCachingClockTests;
-			productReference = ADE5B6731EC87BF100FF8398 /* GeoCachingClockTests.xctest */;
+			productReference = ADE5B6731EC87BF100FF8398 /* GeoCachingWatchTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ADE5B67D1EC87BF100FF8398 /* GeoCachingClockUITests */ = {
+		ADE5B67D1EC87BF100FF8398 /* GeoCachingWatchUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADE5B68D1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockUITests" */;
+			buildConfigurationList = ADE5B68D1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingWatchUITests" */;
 			buildPhases = (
 				ADE5B67A1EC87BF100FF8398 /* Sources */,
 				ADE5B67B1EC87BF100FF8398 /* Frameworks */,
@@ -276,9 +276,9 @@
 			dependencies = (
 				ADE5B6801EC87BF100FF8398 /* PBXTargetDependency */,
 			);
-			name = GeoCachingClockUITests;
+			name = GeoCachingWatchUITests;
 			productName = GeoCachingClockUITests;
-			productReference = ADE5B67E1EC87BF100FF8398 /* GeoCachingClockUITests.xctest */;
+			productReference = ADE5B67E1EC87BF100FF8398 /* GeoCachingWatchUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		ADE5B6911EC87C1600FF8398 /* WatchGeocaching */ = {
@@ -362,7 +362,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ADE5B6571EC87BF100FF8398 /* Build configuration list for PBXProject "GeoCachingClock" */;
+			buildConfigurationList = ADE5B6571EC87BF100FF8398 /* Build configuration list for PBXProject "GeoCachingWatch" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -375,9 +375,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */,
-				ADE5B6721EC87BF100FF8398 /* GeoCachingClockTests */,
-				ADE5B67D1EC87BF100FF8398 /* GeoCachingClockUITests */,
+				ADE5B65B1EC87BF100FF8398 /* GeoCachingWatch */,
+				ADE5B6721EC87BF100FF8398 /* GeoCachingWatchTests */,
+				ADE5B67D1EC87BF100FF8398 /* GeoCachingWatchUITests */,
 				ADE5B6911EC87C1600FF8398 /* WatchGeocaching */,
 				ADE5B69D1EC87C1700FF8398 /* WatchGeocaching Extension */,
 			);
@@ -471,12 +471,12 @@
 /* Begin PBXTargetDependency section */
 		ADE5B6751EC87BF100FF8398 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */;
+			target = ADE5B65B1EC87BF100FF8398 /* GeoCachingWatch */;
 			targetProxy = ADE5B6741EC87BF100FF8398 /* PBXContainerItemProxy */;
 		};
 		ADE5B6801EC87BF100FF8398 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ADE5B65B1EC87BF100FF8398 /* GeoCachingClock */;
+			target = ADE5B65B1EC87BF100FF8398 /* GeoCachingWatch */;
 			targetProxy = ADE5B67F1EC87BF100FF8398 /* PBXContainerItemProxy */;
 		};
 		ADE5B6A11EC87C1700FF8398 /* PBXTargetDependency */ = {
@@ -617,9 +617,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
-				INFOPLIST_FILE = GeoCachingClock/Info.plist;
+				INFOPLIST_FILE = GeoCachingWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -630,9 +630,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
-				INFOPLIST_FILE = GeoCachingClock/Info.plist;
+				INFOPLIST_FILE = GeoCachingWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -644,12 +644,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
-				INFOPLIST_FILE = GeoCachingClockTests/Info.plist;
+				INFOPLIST_FILE = GeoCachingWatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockTests;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCachingClock.app/GeoCachingClock";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCachingWatch.app/GeoCachingWatch";
 			};
 			name = Debug;
 		};
@@ -659,12 +659,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
-				INFOPLIST_FILE = GeoCachingClockTests/Info.plist;
+				INFOPLIST_FILE = GeoCachingWatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockTests;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCachingClock.app/GeoCachingClock";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoCachingWatch.app/GeoCachingWatch";
 			};
 			name = Release;
 		};
@@ -673,9 +673,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
-				INFOPLIST_FILE = GeoCachingClockUITests/Info.plist;
+				INFOPLIST_FILE = GeoCachingWatchUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = GeoCachingClock;
@@ -687,9 +687,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
-				INFOPLIST_FILE = GeoCachingClockUITests/Info.plist;
+				INFOPLIST_FILE = GeoCachingWatchUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClockUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = GeoCachingClock;
@@ -703,7 +703,7 @@
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
 				INFOPLIST_FILE = "WatchGeocaching Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -720,7 +720,7 @@
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
 				INFOPLIST_FILE = "WatchGeocaching Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatch.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -738,7 +738,7 @@
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
 				IBSC_MODULE = WatchGeocaching_Extension;
 				INFOPLIST_FILE = WatchGeocaching/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -756,7 +756,7 @@
 				DEVELOPMENT_TEAM = RFAV5NU2JZ;
 				IBSC_MODULE = WatchGeocaching_Extension;
 				INFOPLIST_FILE = WatchGeocaching/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingClock.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = LestolaIndustries.GeoCachingWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -769,7 +769,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADE5B6571EC87BF100FF8398 /* Build configuration list for PBXProject "GeoCachingClock" */ = {
+		ADE5B6571EC87BF100FF8398 /* Build configuration list for PBXProject "GeoCachingWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE5B6851EC87BF100FF8398 /* Debug */,
@@ -778,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADE5B6871EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClock" */ = {
+		ADE5B6871EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE5B6881EC87BF100FF8398 /* Debug */,
@@ -787,7 +787,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADE5B68A1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockTests" */ = {
+		ADE5B68A1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingWatchTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE5B68B1EC87BF100FF8398 /* Debug */,
@@ -796,7 +796,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADE5B68D1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingClockUITests" */ = {
+		ADE5B68D1EC87BF100FF8398 /* Build configuration list for PBXNativeTarget "GeoCachingWatchUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADE5B68E1EC87BF100FF8398 /* Debug */,
