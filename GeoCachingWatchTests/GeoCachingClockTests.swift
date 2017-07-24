@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import GeoCachingClock
+@testable import GeoCachingWatch
 
 class GeoCachingClockTests: XCTestCase {
     
