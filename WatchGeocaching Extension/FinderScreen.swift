@@ -48,6 +48,13 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        //muutetaan ohjelman aukioloajaksi 8min
+        if #available(watchOSApplicationExtension 4.0, *) {
+            WKExtension.shared().isFrontmostTimeoutExtended = true
+        } else {
+            // Fallback on earlier versions
+        }
+        
         //poistetaan nuppineulat jos niitä on jäänyt viimekerroilta
         mapOutlet.removeAllAnnotations()
         
@@ -140,6 +147,7 @@ class FinderScreen: WKInterfaceController, CLLocationManagerDelegate, WKCrownDel
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        
     }
     
     func measure(lat1:Double, lon1:Double, lat2:Double, lon2:Double) -> Double{

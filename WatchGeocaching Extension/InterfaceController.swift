@@ -58,6 +58,13 @@ class InterfaceController: WKInterfaceController, CLLocationManagerDelegate {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
+        //muutetaan ohjelman aukioloajaksi 2min
+        if #available(watchOSApplicationExtension 4.0, *) {
+            WKExtension.shared().isFrontmostTimeoutExtended = false
+        } else {
+            // Fallback on earlier versions
+        }
+        
         
     }
     
